@@ -9,7 +9,7 @@ metadata:
     pipelinesascode.tekton.dev/task: "[.tekton/trillian-unit-test.yaml]"
     pipelinesascode.tekton.dev/on-cel-expression: event == "push" && target_branch
       == "main"
-  creationTimestamp: null
+  creationTimestamp:
   labels:
     appstudio.openshift.io/application: unit
     appstudio.openshift.io/component: trillian
