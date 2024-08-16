@@ -14,8 +14,4 @@ spec:
       script: |
         #!/usr/bin/env sh
         go mod vendor
-        go test $(go list ./... | grep -v /storage/ | grep -v /client/ )
-
-# This file bundles the unit tests for trillian. 
-# If any changes are made to this file, it must be pushed to Quay using the following command:
-# 'tkn bundle push quay.io/securesign/trillian-unit-test:latest -f .tekton/trillian-unit-test.yaml'.
+        go test -buildvcs=false $(go list ./... | grep -v /storage/ | grep -v /client/ )
